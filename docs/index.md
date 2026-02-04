@@ -13,4 +13,5 @@ This page links to:
   → docs/examples/trajectory-audit-template.md
 - Certificate schema: spec/certificate-schema.md  
 - Sample certificate: examples/sample-certificate.json  
+- Executive summary: EXECUTIVE.md  
 
