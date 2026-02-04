@@ -11,4 +11,6 @@ This page links to:
   → docs/spec/ndgate-spec.md  
 - **Audit template** (concrete deliverable)  
   → docs/examples/trajectory-audit-template.md
+- Certificate schema: spec/certificate-schema.md  
+- Sample certificate: examples/sample-certificate.json  
 
