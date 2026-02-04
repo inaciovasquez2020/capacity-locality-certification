@@ -1,19 +1,14 @@
-# Capacity–Locality Certification (CLC)
+# Capacity–Locality Certification
 
-## What this is
-A certification layer for predictive systems:
-predict in the **liquid** regime, abstain in the **frozen** regime.
+Structural certification for predictive systems under information capacity and locality limits.
 
-## Read
-- Academic note: papers/certified-limits-note.md  
-- Industry whitepaper: whitepapers/clc-whitepaper.md  
-- NDGate spec: spec/ndgate-spec.md  
-- Audit template: examples/trajectory-audit-template.md
-
-## Deliverable
-(prediction set, certificate) with:
-- R (locality),
-- C (capacity),
-- regime,
-- abstention flag.
+This page links to:
+- **Certified limits note** (theory)  
+  → docs/papers/certified-limits-note.md  
+- **Industry whitepaper** (audit story)  
+  → docs/whitepapers/clc-whitepaper.md  
+- **NDGate spec** (technical core)  
+  → docs/spec/ndgate-spec.md  
+- **Audit template** (concrete deliverable)  
+  → docs/examples/trajectory-audit-template.md
 
