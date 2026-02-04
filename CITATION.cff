@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Capacity–Locality Certification Standard"
+authors:
+  - family-names: Vasquez
+    given-names: Inacio F.
+version: "1.0"
+date-released: 2026-02-04
+url: https://inaciovasquez2020.github.io/capacity-locality-certification/
+
