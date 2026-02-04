@@ -5,7 +5,7 @@
 
 This repository serves as the technical foundation for structural certification in predictive systems. It provides the bridging logic between high-rank combinatorial geometry (URF) and real-world algorithmic safety.
 
-## 📂 Repository Map
+## Repository Map
 
 ### 1. [Theory](docs/papers/certified-limits-note.md)
 Formal notes on **Certified Limits** and spectral rigidity markers.
