@@ -1,0 +1,12 @@
+{
+  "system": "VideoGAN Trajectory Predictor",
+  "version": "1.2",
+  "timestamp": "2026-02-04T15:32:00Z",
+  "R": "camera_fov",
+  "C": "training_dataset_5M",
+  "regime": "frozen",
+  "prediction_set": null,
+  "abstain": true,
+  "reason": "occlusion"
+}
+
