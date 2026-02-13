@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CapacityLocalityCertificate",
+  "type": "object",
+  "required": ["system", "capacity_bound", "locality_bound", "verdict"],
+  "properties": {
+    "system": { "type": "string" },
+    "capacity_bound": { "type": "string" },
+    "locality_bound": { "type": "string" },
+    "verdict": { "enum": ["pass", "fail"] }
+  },
+  "additionalProperties": false
+}

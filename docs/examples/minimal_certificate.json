@@ -1,0 +1,6 @@
+{
+  "system": "generic_computation",
+  "capacity_bound": "finite transcript capacity",
+  "locality_bound": "bounded radius locality",
+  "verdict": "pass"
+}
