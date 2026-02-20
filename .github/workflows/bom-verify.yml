@@ -1,0 +1,22 @@
+name: bom-verify
+on:
+  push:
+    paths:
+      - "certs/bom/**"
+      - "tools/bom/**"
+  pull_request:
+    paths:
+      - "certs/bom/**"
+      - "tools/bom/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install jsonschema
+      - run: python tools/bom/verify_bom_cert.py certs/bom/schema/BOM_CERT.schema.json certs/bom/examples/BOM_CERT_POS_0001.json
+      - run: bash tools/bom/test_bom_verify.sh
