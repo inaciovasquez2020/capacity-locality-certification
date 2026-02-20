@@ -1,0 +1,124 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "https://vasquezresearch.com/schemas/BOM_CERT.schema.json",
+"title": "BOM_CERT",
+"type": "object",
+"required": ["spec_version", "graph", "params", "cycles", "orank_proof", "local_types"],
+"properties": {
+"spec_version": { "type": "string", "enum": ["bom-cert-1.0"] },
+"graph": {
+"type": "object",
+"required": ["n", "edges", "maxDeg_declared"],
+"properties": {
+"n": { "type": "integer", "minimum": 1 },
+"edges": {
+"type": "array",
+"items": {
+"type": "array",
+"prefixItems": [
+{ "type": "integer", "minimum": 0 },
+{ "type": "integer", "minimum": 0 }
+],
+"minItems": 2,
+"maxItems": 2
+}
+},
+"maxDeg_declared": { "type": "integer", "minimum": 0 }
+}
+},
+"params": {
+"type": "object",
+"required": ["k", "Delta", "r", "B0", "R", "type_model"],
+"properties": {
+"k": { "type": "integer", "minimum": 1 },
+"Delta": { "type": "integer", "minimum": 0 },
+"r": { "type": "integer", "minimum": 0 },
+"B0": { "type": "integer", "minimum": 0 },
+"R": { "type": "integer", "minimum": 0 },
+"type_model": { "type": "string", "enum": ["EF_k_pebble_r_round", "Gaifman_kvar_qrank_r"] }
+}
+},
+"cycles": {
+"type": "object",
+"required": ["edge_order", "cycle_edge_sets"],
+"properties": {
+"edge_order": {
+"type": "array",
+"items": {
+"type": "array",
+"prefixItems": [
+{ "type": "integer", "minimum": 0 },
+{ "type": "integer", "minimum": 0 }
+],
+"minItems": 2,
+"maxItems": 2
+}
+},
+"cycle_edge_sets": {
+"type": "array",
+"items": {
+"type": "array",
+"items": { "type": "integer", "minimum": 0 }
+}
+},
+"overlap_matrix_F2": {
+"type": "array",
+"items": { "type": "string", "pattern": "^[01]+$" }
+}
+}
+},
+"orank_proof": {
+"type": "object",
+"required": ["orank", "rank_witness"],
+"properties": {
+"orank": { "type": "integer", "minimum": 0 },
+"rank_witness": {
+"type": "object",
+"required": ["pivots", "rref_rows_F2"],
+"properties": {
+"pivots": { "type": "array", "items": { "type": "integer", "minimum": 0 } },
+"rref_rows_F2": { "type": "array", "items": { "type": "string", "pattern": "^[01]+$" } }
+}
+}
+}
+},
+"local_types": {
+"type": "object",
+"required": ["ball_size_bound", "type_catalog", "witness_vertices"],
+"properties": {
+"ball_size_bound": { "type": "integer", "minimum": 1 },
+"type_catalog": {
+"type": "array",
+"items": {
+"type": "object",
+"required": ["type_id", "canonical_encoding"],
+"properties": {
+"type_id": { "type": "string" },
+"canonical_encoding": { "type": "string" }
+}
+}
+},
+"witness_vertices": {
+"type": "array",
+"items": {
+"type": "object",
+"required": ["type_id", "v"],
+"properties": {
+"type_id": { "type": "string" },
+"v": { "type": "integer", "minimum": 0 }
+}
+}
+}
+}
+},
+"signature": {
+"type": "object",
+"required": ["minisign_pubkey_id", "payload_hash_sha256", "minisig"],
+"properties": {
+"minisign_pubkey_id": { "type": "string" },
+"payload_hash_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+"minisig": { "type": "string" }
+}
+}
+}
+}

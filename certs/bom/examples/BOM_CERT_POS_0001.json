@@ -1,0 +1,36 @@
+{
+"spec_version": "bom-cert-1.0",
+"graph": {
+"n": 4,
+"edges": [[0,1],[1,2],[2,3],[3,0],[0,2]],
+"maxDeg_declared": 3
+},
+"params": {
+"k": 4,
+"Delta": 3,
+"r": 1,
+"B0": 10,
+"R": 1,
+"type_model": "EF_k_pebble_r_round"
+},
+"cycles": {
+"edge_order": [[0,1],[1,2],[2,3],[3,0],[0,2]],
+"cycle_edge_sets": [[0,1,4],[2,3,4]]
+},
+"orank_proof": {
+"orank": 2,
+"rank_witness": {
+"pivots": [0,2],
+"rref_rows_F2": ["11100","00111"]
+}
+},
+"local_types": {
+"ball_size_bound": 4,
+"type_catalog": [
+{ "type_id": "t0", "canonical_encoding": "rooted_ball_R1_v0" }
+],
+"witness_vertices": [
+{ "type_id": "t0", "v": 0 }
+]
+}
+}
