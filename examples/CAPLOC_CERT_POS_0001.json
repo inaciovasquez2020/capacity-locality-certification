@@ -1,0 +1,13 @@
+{
+  "artifacts": [
+    {
+      "name": "README.md",
+      "sha256": "576c42368bb4e346e522833b5ad4a6fa89a78380725be50eb7eb5163c5b4fe76"
+    }
+  ],
+  "certificate_id": "CAPLOC_CERT_POS_0001",
+  "claims": [
+    "Certificate schema round-trip validation only"
+  ],
+  "issued_utc": "2026-02-20T00:00:00Z"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CAPLOC_CERT",
+  "type": "object",
+  "required": ["certificate_id", "issued_utc", "claims", "artifacts"],
+  "properties": {
+    "certificate_id": {"type": "string"},
+    "issued_utc": {"type": "string"},
+    "claims": {"type": "array", "items": {"type": "string"}},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "sha256"],
+        "properties": {
+          "name": {"type": "string"},
+          "sha256": {"type": "string"}
+        }
+      }
+    }
+  }
+}

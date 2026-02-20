@@ -1,0 +1,20 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema
+      - name: schema validate
+        run: |
+          python tools/verify_schema.py schemas/CAPLOC_CERT.schema.json examples/CAPLOC_CERT_POS_0001.json
