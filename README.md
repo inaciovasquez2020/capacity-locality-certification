@@ -13,3 +13,5 @@ Integration
 - Intended to be consumed by urf-verifier as an external schema pack
 - Compatible with CI-only validation and offline verification
 
+
+![CI](https://github.com/inaciovasquez2020/capacity-locality-certification/actions/workflows/ci.yml/badge.svg)
