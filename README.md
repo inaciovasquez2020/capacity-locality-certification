@@ -15,3 +15,5 @@ Integration
 
 
 ![CI](https://github.com/inaciovasquez2020/capacity-locality-certification/actions/workflows/ci.yml/badge.svg)
+
+This project relies on shared tooling and reproducibility infrastructure provided by the scientific-infrastructure repository; it contains domain-specific research code only.
