@@ -1,4 +1,7 @@
 name: ci
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
   pull_request:
@@ -7,8 +10,8 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: install deps
@@ -18,3 +21,4 @@ jobs:
       - name: schema validate
         run: |
           python tools/verify_schema.py schemas/CAPLOC_CERT.schema.json examples/CAPLOC_CERT_POS_0001.json
+  workflow_dispatch:
