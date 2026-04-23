@@ -7,6 +7,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -14,4 +15,3 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: ./scripts/validate_cert.sh
-  workflow_dispatch:
