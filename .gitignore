@@ -2,3 +2,6 @@ site/
 .lake/
 lake-manifest.json
 .venv/
+__pycache__/
+.pytest_cache/
+*.pyc
