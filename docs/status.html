@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>capacity-locality-certification — Capacity-Locality Certification Status</title>
+<meta name="description" content="Repository-local artifact-status viewer for capacity-locality-certification. Distinguishes closed local surfaces from open theorem-level mathematics. No theorem-level overclaim." />
+<style>
+  :root{
+    --bg:#0b0d12; --fg:#e6e8ee; --muted:#9aa3b2; --card:#11141b; --border:#222836;
+    --closed:#1f9d55; --closed-bg:#0f1f17; --closed-border:#1f9d5544;
+    --open:#d9534f;  --open-bg:#1f1313;  --open-border:#d9534f44;
+    --cond:#c98a14;  --cond-bg:#1f1a0f;  --cond-border:#c98a1444;
+    --warn:#c98a14;  --warn-bg:#1f1a0f;  --warn-border:#c98a1466;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:inherit}
+  header{border-bottom:1px solid var(--border);background:var(--card)}
+  .wrap{max-width:1080px;margin:0 auto;padding:20px 18px}
+  .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  h1{font-size:22px;margin:.4rem 0 .2rem}
+  h2{font-size:18px;margin:0 0 .3rem}
+  p.lead{margin:0;color:var(--muted)}
+  .banner{border-bottom:1px solid var(--warn-border);background:var(--warn-bg);color:#f4d58a}
+  .banner .wrap{display:flex;gap:10px;align-items:flex-start;padding:12px 18px}
+  .banner strong{color:#fff}
+  main{display:grid;gap:18px;padding:22px 18px;max-width:1080px;margin:0 auto}
+  .card{border:1px solid var(--border);background:var(--card);border-radius:10px;padding:18px}
+  .grid2{display:grid;gap:18px}
+  @media(min-width:880px){.grid2{grid-template-columns:1fr 1fr}}
+  .flags{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+  .flag{display:flex;justify-content:space-between;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-family:var(--mono);font-size:12px}
+  .flag .v.t{color:var(--closed)} .flag .v.f{color:var(--open)}
+  .meta{border:1px solid var(--border);border-radius:8px}
+  .meta .row{display:flex;justify-content:space-between;padding:8px 14px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:12px}
+  .meta .row:last-child{border-bottom:none}
+  .meta .k{color:var(--muted)} .meta .v{color:var(--fg);font-weight:600}
+  ul.surf{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.surf li{border:1px solid var(--border);border-radius:8px;padding:10px 12px;display:flex;gap:10px;align-items:flex-start}
+  ul.surf.closed li{background:var(--closed-bg);border-color:var(--closed-border)}
+  ul.surf.open   li{background:var(--open-bg);  border-color:var(--open-border)}
+  ul.surf.cond   li{background:var(--cond-bg);  border-color:var(--cond-border)}
+  .tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;padding:2px 6px;border-radius:3px}
+  .tag.closed{background:var(--closed);color:#fff}
+  .tag.open  {background:var(--open);  color:#fff}
+  .tag.cond  {background:var(--cond);  color:#fff}
+  .label{font-family:var(--mono);font-size:13px;font-weight:600}
+  .detail{color:var(--muted);font-size:12px;margin-top:2px}
+  .verif{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+  .verif .item{display:flex;justify-content:space-between;padding:8px 12px;border:1px solid var(--closed-border);background:var(--closed-bg);border-radius:6px;font-family:var(--mono);font-size:12px}
+  .verif .item .v{color:var(--closed);font-weight:700}
+  svg{width:100%;height:auto;max-width:100%}
+  footer{padding:18px;text-align:center;color:var(--muted);font-family:var(--mono);font-size:11px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .sw{display:inline-block;width:10px;height:10px;border-radius:2px}
+  .sw.closed{background:var(--closed)} .sw.open{background:var(--open)} .sw.cond{background:var(--cond)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">repository status viewer</div>
+    <h1 id="title">capacity-locality-certification — Capacity-Locality Certification Status</h1>
+    <p class="lead">Status: <strong>capacity-locality certification artifact</strong></p>
+  </div>
+</header>
+
+<div class="banner" role="note" aria-label="claim boundary">
+  <div class="wrap">
+    <span aria-hidden="true">⚠</span>
+    <p>
+      This repository verifies a finite <strong>capacity-locality certification artifact</strong>.
+      It does <strong>not</strong> prove SAT lower bounds, CSP lower bounds, P versus NP,
+      circuit lower bounds, communication-complexity lower bounds, or any
+      theorem-complete capacity-locality closure. All claims below are
+      repository-local unless explicitly marked open.
+    </p>
+  </div>
+</div>
+
+<main>
+  <section class="card" aria-labelledby="s1">
+    <div class="eyebrow">01 / repository status</div>
+    <h2 id="s1">Claim flags</h2>
+    <p class="lead">Exact boolean state recorded by the repository.</p>
+    <div class="flags" style="margin-top:12px">
+      <div class="flag"><span>theorem_complete</span><span class="v f">false</span></div>
+      <div class="flag"><span>p_vs_np_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>sat_lower_bound_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>csp_lower_bound_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>circuit_lower_bound_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>communication_lower_bound_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>capacity_locality_theorem_claimed</span><span class="v f">false</span></div>
+      <div class="flag"><span>repository_local_artifact</span><span class="v t">true</span></div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="s2">
+    <div class="eyebrow">02 / artifact metadata</div>
+    <h2 id="s2">Recorded finite parameters</h2>
+    <div class="meta" style="margin-top:10px">
+      <div class="row"><span class="k">artifact_type</span><span class="v">capacity-locality certification artifact</span></div>
+      <div class="row"><span class="k">repository_scope</span><span class="v">certification-template-layer</span></div>
+      <div class="row"><span class="k">seed</span><span class="v">20260425</span></div>
+      <div class="row"><span class="k">certificate_count</span><span class="v">finite (recorded in manifest)</span></div>
+      <div class="row"><span class="k">deterministic_scripts</span><span class="v">true</span></div>
+      <div class="row"><span class="k">verifier_hooks</span><span class="v">true</span></div>
+      <div class="row"><span class="k">manifest</span><span class="v">closed / hashed</span></div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="s3">
+    <div class="eyebrow">03 / verifier &amp; CI surfaces</div>
+    <h2 id="s3">Repository-local checks</h2>
+    <div class="verif" style="margin-top:10px">
+      <div class="item"><span>external status lock</span><span class="v">PASS</span></div>
+      <div class="item"><span>pytest</span><span class="v">all green</span></div>
+      <div class="item"><span>latest workflows</span><span class="v">green</span></div>
+      <div class="item"><span>open PRs</span><span class="v">none</span></div>
+      <div class="item"><span>main branch</span><span class="v">clean / up to date</span></div>
+      <div class="item"><span>certificate verifier</span><span class="v">finite certificates pass</span></div>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section class="card" aria-labelledby="s4">
+      <div class="eyebrow">04 / closed surfaces</div>
+      <h2 id="s4">Repository-local</h2>
+      <p class="lead">Verified inside the repository as a finite executable artifact.</p>
+      <ul class="surf closed" style="margin-top:10px">
+        <li><div><div><span class="label">deterministic certification scripts</span> <span class="tag closed">CLOSED</span></div><div class="detail">Reproducible from seed 20260425.</div></div></li>
+        <li><div><div><span class="label">capacity surface present</span> <span class="tag closed">CLOSED</span></div><div class="detail">Structural surface available.</div></div></li>
+        <li><div><div><span class="label">locality surface present</span> <span class="tag closed">CLOSED</span></div><div class="detail">Structural surface available.</div></div></li>
+        <li><div><div><span class="label">certificate catalog with hashes</span> <span class="tag closed">CLOSED</span></div><div class="detail">Finite catalog, recorded hashes.</div></div></li>
+        <li><div><div><span class="label">certificate-verifier surface</span> <span class="tag closed">CLOSED</span></div><div class="detail">Finite certificates pass the verifier.</div></div></li>
+        <li><div><div><span class="label">release-manifest surface</span> <span class="tag closed">CLOSED</span></div><div class="detail">Manifest closed and recorded.</div></div></li>
+        <li><div><div><span class="label">external status lock</span> <span class="tag closed">CLOSED</span></div><div class="detail">PASS.</div></div></li>
+        <li><div><div><span class="label">CI / test surface</span> <span class="tag closed">CLOSED</span></div><div class="detail">pytest green, workflows green.</div></div></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="s5">
+      <div class="eyebrow">05 / open surfaces</div>
+      <h2 id="s5">Theorem-level mathematics</h2>
+      <p class="lead">Outside repository scope. Not claimed, not proved.</p>
+      <ul class="surf open" style="margin-top:10px">
+        <li><div><div><span class="label">capacity-locality theorem</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">circuit lower bound</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">communication-complexity lower bound</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">SAT lower bound</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">CSP lower bound</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">P versus NP</span> <span class="tag open">OPEN</span></div><div class="detail">Not claimed. External mathematics.</div></div></li>
+        <li><div><div><span class="label">uniform asymptotic capacity family</span> <span class="tag open">OPEN</span></div><div class="detail">Only finite certificates exist in the repository.</div></div></li>
+        <li><div><div><span class="label">non-circular hardness invariant</span> <span class="tag open">OPEN</span></div><div class="detail">Independent obstruction not established.</div></div></li>
+        <li><div><div><span class="label">algorithm-coverage theorem</span> <span class="tag open">OPEN</span></div><div class="detail">Model M not proved equal to P.</div></div></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="s6">
+    <div class="eyebrow">06 / conditional surfaces</div>
+    <h2 id="s6">Hypothesis-gated statements</h2>
+    <p class="lead">Hold only relative to an external hypothesis. Not unconditional theorems.</p>
+    <ul class="surf cond" style="margin-top:10px">
+      <li><div><div><span class="label">capacity-locality bound under hypothesis H</span> <span class="tag cond">CONDITIONAL</span></div><div class="detail">Conditional on H; H is not proved in this repository.</div></div></li>
+      <li><div><div><span class="label">certificate-soundness relative to oracle O</span> <span class="tag cond">CONDITIONAL</span></div><div class="detail">Holds modulo correctness of O; O is external.</div></div></li>
+      <li><div><div><span class="label">locality preservation under reduction R</span> <span class="tag cond">CONDITIONAL</span></div><div class="detail">Conditional on R being length-preserving in the asymptotic regime.</div></div></li>
+    </ul>
+    <div class="legend">
+      <span><span class="sw closed"></span>closed: repository-local</span>
+      <span><span class="sw cond"></span>conditional: hypothesis-gated</span>
+      <span><span class="sw open"></span>open: theorem-level mathematics</span>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="s7">
+    <div class="eyebrow">07 / certification map</div>
+    <h2 id="s7">Repository-local flow</h2>
+    <p class="lead">Endpoint: certified capacity-locality certification artifact. Boundary to theorem-level math is explicit.</p>
+    <p class="lead" style="margin-top:12px">
+      capacity surface + locality surface → certificate catalog → certificate verifier → release manifest → external status lock → certified capacity-locality certification artifact.
+    </p>
+  </section>
+
+  <section class="card" aria-labelledby="s8">
+    <div class="eyebrow">08 / status interpretation</div>
+    <h2 id="s8">Status interpretation</h2>
+    <p>
+      The verified endpoint is repository-local closure of a finite capacity-locality certification artifact.
+      The remaining work is external mathematics: an asymptotic capacity family, semantic preservation,
+      polynomial blowup control, a non-circular hardness invariant, and algorithm coverage.
+      This dashboard must not upgrade repository-local verification into theorem-level complexity claims.
+    </p>
+  </section>
+</main>
+
+<footer>
+  repository-local artifact-status viewer / no frontend dependencies
+</footer>
+</body>
+</html>
